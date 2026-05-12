@@ -2,6 +2,7 @@
 
 import { impactStats } from "@/lib/data";
 import { motion } from "framer-motion";
+import { CountUp } from "@/components/shared/CountUp";
 
 export function ImpactStats() {
   return (
@@ -18,7 +19,7 @@ export function ImpactStats() {
               className="group p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 text-center space-y-4 hover:bg-white hover:shadow-premium hover:-translate-y-2 transition-all duration-500"
             >
               <div className="text-5xl md:text-6xl font-black text-primary flex justify-center items-baseline group-hover:scale-110 transition-transform duration-500">
-                <span>{stat.value}</span>
+                <CountUp value={stat.value} />
                 {stat.valueSuffix && <span className="text-2xl md:text-3xl ml-1">{stat.valueSuffix}</span>}
               </div>
               <div className="h-1 w-12 bg-secondary/30 rounded-full mx-auto group-hover:w-20 transition-all duration-500" />

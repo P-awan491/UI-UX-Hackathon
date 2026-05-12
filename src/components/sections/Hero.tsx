@@ -67,8 +67,13 @@ export function Hero() {
             >
               <div className="flex -space-x-3">
                 {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-12 h-12 rounded-full border-4 border-white overflow-hidden shadow-sm">
-                    <img src={`https://i.pravatar.cc/100?u=${i + 10}`} alt="User" />
+                  <div key={i} className="w-12 h-12 rounded-full border-4 border-white overflow-hidden shadow-sm relative">
+                    <Image 
+                      src={`https://i.pravatar.cc/100?u=${i + 10}`} 
+                      alt="User" 
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 ))}
               </div>
@@ -86,10 +91,13 @@ export function Hero() {
             className="relative"
           >
             <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
-              <img 
+              <Image 
                 src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop" 
                 alt="Impact" 
-                className="w-full h-auto object-cover aspect-[4/5]"
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </div>

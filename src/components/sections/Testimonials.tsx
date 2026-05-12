@@ -3,6 +3,7 @@
 import { testimonials } from "@/lib/data";
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
+import Image from "next/image";
 
 export function TestimonialsSection() {
   return (
@@ -32,11 +33,14 @@ export function TestimonialsSection() {
                 &quot;{item.quote}&quot;
               </p>
               <div className="flex items-center gap-5 pt-4 border-t border-slate-50">
-                <img 
-                  src={item.avatar} 
-                  alt={item.author} 
-                  className="w-16 h-16 rounded-2xl object-cover border-4 border-slate-50 shadow-sm"
-                />
+                <div className="relative w-16 h-16 shrink-0">
+                  <Image 
+                    src={item.avatar} 
+                    alt={item.author} 
+                    fill
+                    className="rounded-2xl object-cover border-4 border-slate-50 shadow-sm"
+                  />
+                </div>
                 <div>
                   <h4 className="text-xl font-black text-slate-900">{item.author}</h4>
                   <p className="text-sm font-bold text-secondary uppercase tracking-widest">{item.role}</p>

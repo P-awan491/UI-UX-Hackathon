@@ -3,6 +3,7 @@ import { PartnersSection } from "@/components/sections/Partners";
 import { ImpactStats } from "@/components/sections/ImpactStats";
 import { FeaturedPrograms } from "@/components/sections/FeaturedPrograms";
 import { TransparencySection } from "@/components/sections/Transparency";
+import { ApproachSection } from "@/components/sections/Approach";
 import { TestimonialsSection } from "@/components/sections/Testimonials";
 import { CTASection } from "@/components/sections/CTASection";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <ImpactStats />
       <FeaturedPrograms />
       <TransparencySection />
+      <ApproachSection />
       <TestimonialsSection />
       <CTASection />
     </main>
